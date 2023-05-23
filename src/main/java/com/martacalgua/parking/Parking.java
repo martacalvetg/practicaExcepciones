@@ -58,7 +58,15 @@ public class Parking {
     }
     
     public int getPlazasLibres(){
-        return Collections.frequency(matriculas,null);
+        
+        int plazasLibres=0;
+        for(int i=0; i<matriculas.size();i++){
+            if(matriculas.get(i)==null){
+                plazasLibres++;
+            }
+        }
+        
+        return plazasLibres;
     }
     
     @Override
